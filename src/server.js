@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors')
 const mongoose = require('mongoose');
-//mongoose.connect("mongodb+srv://rachidb5:6WFAMxxLV0Bos6gs@cluster0.uthyo.mongodb.net/meetpets?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+
 mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 
 const routes = require('./routes');
