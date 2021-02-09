@@ -17,7 +17,7 @@ app.use('/qrcode', express.static(path.resolve(__dirname, '..', 'tmp', 'qrcodes'
 app.use(routes);
 
 
-  app.listen(3000, () => {
+  app.listen(process.env.PORT || 3000, () => {
     console.log('Acessar http://localhost:3000');
     console.log('Servidor executando na porta 3000');
   
