@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors')
 const mongoose = require('mongoose');
 
+//mongoose.connect("mongodb://127.0.0.1:27017/meetpets", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 
 const routes = require('./routes');
