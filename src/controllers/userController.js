@@ -1,7 +1,4 @@
 const User = require('../models/userModel')
-const qr = require('qr-image')
-const fs = require('fs')
-
 
 exports.register = async function(req,res){
 
