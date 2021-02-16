@@ -26,5 +26,13 @@
   "devDependencies": {
     "nodemon": "^1.19.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachidb5/meetpets-back.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rachidb5/meetpets-back/issues"
+  },
+  "homepage": "https://github.com/rachidb5/meetpets-back#readme",
   "description": ""
 }
