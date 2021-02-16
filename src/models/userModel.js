@@ -41,8 +41,6 @@ user.prototype.register = async function(){
 
    // await this.userExists()
 
-    if(this.errors.length > 0) return;
-
     this.user = await userModel.create(this.body)
 
 }
