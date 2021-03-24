@@ -4,8 +4,8 @@ const app = express();
 const cors = require('cors')
 const mongoose = require('mongoose');
 
-//mongoose.connect("mongodb://127.0.0.1:27017/meetpets", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
-mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+mongoose.connect("mongodb://127.0.0.1:27017/meetpets", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+//mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 //mongoose.connect("mongodb+srv://rachidb:rjr290493@cluster0.kmkez.mongodb.net/meetpets?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 
 const routes = require('./routes');
