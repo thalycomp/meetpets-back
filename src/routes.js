@@ -16,9 +16,4 @@ route.get('/qr/:id', qrController.qrcode)
 route.get('/pdf/:id', pdfController.pdf)
 
 
-
-//rota não deve ser utilizada na aplicação
-route.get('/show/:id', qrController.showqr)
-
-
 module.exports = route
