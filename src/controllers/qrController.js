@@ -9,15 +9,20 @@ exports.qrcode = async function(req,res){
         
         const user = await User.buscaPorId(req.params.id)
     
-        //const url = `http://localhost:3000/${user._id}`
-        const url = `https://meetpets-back.herokuapp.com/${user._id}`
+        const url = `http://localhost:3000/${user._id}`
+        //const url = `https://meetpets-back.herokuapp.com/${user._id}`
         const code = qr.image(url, {type: 'png'})
+        res.type('png')
 
         const qrcode = fs.createWriteStream(`tmp/qrcodes/${user._id}.png`);
-
         code.pipe(qrcode)
+        code.pipe(res)
 
-        return res.status(200).json(url)
+        //const fota = fs.readFileSync(`tmp/qrcodes/${user._id}.png`);
+        
+
+       //res.send(fota)
+        //return res.status(200).json(url)
     
         }catch(e){
             console.log(e)
@@ -43,5 +48,3 @@ exports.showqr = async function(req,res){
         }
            
     }
-    
-
