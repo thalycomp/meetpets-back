@@ -10,7 +10,7 @@ exports.qrcode = async function(req,res){
         const user = await User.buscaPorId(req.params.id)
     
         //const url = `http://localhost:3000/${user._id}`
-        const url = `https://meetpets-back.herokuapp.com/${user._id}`
+        const url = `https://meetpets-qrcode.herokuapp.com/${user._id}`
         const code = qr.image(url, {type: 'png'})
         res.type('png')
 
